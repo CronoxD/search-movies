@@ -1,0 +1,33 @@
+.App {
+	text-align: center;
+	padding-top: 36px;
+	background: #EEF;
+	height: 100%;
+}
+
+.search-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.messageInfo {
+	margin: 15px 0;
+	background-color: #EEF;
+}
+
+.cardMovie {
+	width: 30%;
+	margin: 20px;
+}
+
+.moviesList {
+	margin: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.movieItem {
+	max-width: 30%;
+	margin: 20px;
+}
