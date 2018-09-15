@@ -23,14 +23,13 @@ export class Detail extends Component {
 
         fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&i=${id}`)
             .then(resp => resp.json())
-            .then( movie => {
-                console.log(movie) 
+            .then( movie => { 
                 this.setState({movie})
             })
     }
 
     componentDidMount() {
-        console.log(this.props)
+        
         const {id} = this.props.match.params
         this._fetchMovie(id)
     }
@@ -42,11 +41,18 @@ export class Detail extends Component {
         return (
             <div>
                 <ButtonToHome />
-                <h1>{Title}</h1>
-                <img src={Poster} alt={Title} />
-                <h3>{Actors}</h3>
-                <span> {Metascore} </span>
-                <p> {Plot} </p>
+                <h1 style={{fontSize: 30, margin: 10}}>{Title}</h1>
+                {
+                    Poster === 'N/A' 
+                    ? <img src='https://cdn.browshot.com/static/images/not-found.png' alt='not found'/>
+                    : <img src={Poster} alt={Title} />
+                    
+                }
+                <div style={{margin: 50}}>
+                    <h3><strong>Actors: </strong>{Actors}</h3>
+                    <span> <strong>Score: </strong>{Metascore} </span>
+                    <p> <strong>Description: </strong>{Plot} </p>
+                </div>
             </div>
         )
     }

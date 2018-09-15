@@ -15,11 +15,6 @@
 	background-color: #EEF;
 }
 
-.cardMovie {
-	width: 30%;
-	margin: 20px;
-}
-
 .moviesList {
 	margin: 50px;
 	display: flex;
@@ -30,4 +25,15 @@
 .movieItem {
 	max-width: 30%;
 	margin: 20px;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (max-width: 795px) {
+	.movieItem {
+		max-width: 100%;
+	}
+	.moviesList {
+		margin: 5px;
+	}
 }
