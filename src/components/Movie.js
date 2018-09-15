@@ -16,7 +16,7 @@ class Movie extends Component {
         const { id, title, year, poster } = this.props
         
         return (
-            <Link to={`/detail/${id}`} className="card">
+            <Link to={`/search-movies/detail/${id}`} className="card">
                 <div className="card-image">
                     <figure className="image">
                         {
